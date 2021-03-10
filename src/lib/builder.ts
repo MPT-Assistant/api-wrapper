@@ -11,7 +11,7 @@ export default class Builder {
 	protected readonly apiURL: string = Core.url;
 
 	protected constructor(params?: IOptions) {
-		if (typeof params) {
+		if (params) {
 			this.RequestConfig.headers =
 				params?.apiHeaders || this.RequestConfig.headers;
 			this.apiURL = params?.apiURL || this.apiURL;
