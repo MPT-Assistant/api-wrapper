@@ -27,8 +27,10 @@ export default class Builder {
 		try {
 			const Response = await axios.post(
 				this.apiURL + method,
-				data,
-				this.RequestConfig,
+				null,
+				Object.assign(this.RequestConfig, {
+					params: data,
+				}),
 			);
 			return Response.data;
 		} catch (error) {
