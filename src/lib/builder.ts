@@ -25,13 +25,7 @@ export default class Builder {
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	): Promise<any> {
 		try {
-			const Response = await axios.post(
-				this.apiURL + method,
-				null,
-				Object.assign(this.RequestConfig, {
-					params: data,
-				}),
-			);
+			const Response = await axios.post(this.apiURL + method, data);
 			return Response.data;
 		} catch (error) {
 			throw new Core.error(error.response.data);
