@@ -1,6 +1,7 @@
-interface Params {}
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface Params {}
 
-interface Response {
+export interface Response {
 	date: string;
 	week: string;
 	weekNum: number;
