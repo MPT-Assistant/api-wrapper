@@ -1,6 +1,6 @@
 {
 	"name": "@mpt-assistant/api-wrapper",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"main": "./dist/cjs/main.js",
 	"module": "./dist/main.js",
 	"scripts": {
