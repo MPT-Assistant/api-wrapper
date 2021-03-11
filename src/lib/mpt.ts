@@ -19,7 +19,7 @@ class MPT extends Builder {
 	 * 		"User-Agent": "Custom-UserAgent"
 	 * 	}
 	 * });
-	 *
+	 */
 	constructor(params?: IOptions) {
 		super(params);
 	}
