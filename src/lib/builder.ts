@@ -6,6 +6,7 @@ export default class Builder {
 	protected readonly RequestConfig: AxiosRequestConfig = {
 		headers: {
 			"User-Agent": `mpt-api@${Core.version}`,
+			"Access-Control-Allow-Origin": "https://mpt.rus-anonym.wtf"
 		},
 	};
 	protected readonly apiURL: string = Core.url;

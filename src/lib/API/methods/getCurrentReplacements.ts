@@ -1,5 +1,5 @@
 export interface Params {
-	id: string;
+	id?: string;
 }
 
 interface ResponseData {
