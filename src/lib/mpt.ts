@@ -1,5 +1,7 @@
 import { API_Response, IOptions } from "../types";
 
+import * as getCurrentWeek from "../API/getCurrentWeek";
+
 import Builder from "./builder";
 
 /**
@@ -12,10 +14,9 @@ class MPT extends Builder {
 	 * @example
 	 * const { MPT } = require(`api-devup`);
 	 *
-	 * const API = new MPT("token");
+	 * const API = new MPT();
 	 * // Or
 	 * const API = new MPT({
-	 * 	token: "token",
 	 * 	apiHeaders: {
 	 * 		"User-Agent": "Custom-UserAgent"
 	 * 	}
@@ -39,6 +40,10 @@ class MPT extends Builder {
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	): API_Response<any> {
 		return this.postRequest(method, params);
+	}
+
+	public async getCurrentWeek(): API_Response<getCurrentWeek.Response> {
+		return this.postRequest(getCurrentWeek.method);
 	}
 }
 
