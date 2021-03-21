@@ -1,6 +1,7 @@
 import { API_Response, IOptions } from "../types";
 
 import * as getCurrentWeek from "../API/getCurrentWeek";
+import Schedule from "../API/schedule/main";
 
 import Builder from "./builder";
 
@@ -8,6 +9,7 @@ import Builder from "./builder";
  * MPT API constructor
  */
 class MPT extends Builder {
+	public schedule: Schedule;
 	/**
 	 *
 	 * @param {Object|string} params - Можно передать либо токен, либо набор параметров ({@link IOptions})
@@ -24,6 +26,7 @@ class MPT extends Builder {
 	 */
 	constructor(params?: IOptions) {
 		super(params);
+		this.schedule = new Schedule(params);
 	}
 
 	/**
