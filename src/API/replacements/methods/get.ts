@@ -1,5 +1,5 @@
 export interface Params {
-	group?: string;
+	name?: string;
 }
 
 interface Replacement {
