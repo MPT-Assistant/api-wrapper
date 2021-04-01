@@ -14,7 +14,7 @@ export default class Group extends Builder {
 		return this.postRequest(get.method, params);
 	}
 
-	public async getList(params: getList.Params): API_Response<getList.Response> {
-		return this.postRequest(getList.method, params);
+	public async getList(): API_Response<getList.Response> {
+		return this.postRequest(getList.method);
 	}
 }
