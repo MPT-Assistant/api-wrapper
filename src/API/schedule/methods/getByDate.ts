@@ -17,6 +17,6 @@ interface Day {
 	lessons: Lesson[];
 }
 
-export type Response = Day[];
+export type Response = Day;
 
 export const method = "schedule.getByDate";
