@@ -1,3 +1,7 @@
+interface IAPIParams {
+    apiUrl?: string;
+}
+
 interface IAPIError {
     code: number;
     message: string;
@@ -11,4 +15,4 @@ export * from "./groups";
 export * from "./schedule";
 export * from "./replacements";
 
-export { IAPIError };
+export { IAPIParams, IAPIError };

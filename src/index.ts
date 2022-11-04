@@ -1,14 +1,10 @@
 import axios from "axios";
 import APIError from "./error";
-import { IAPIError } from "./types";
+import { IAPIError, IAPIParams } from "./types";
 
 import APIGroups from "./sections/groups";
 import APISchedule from "./sections/schedule";
 import APIReplacements from "./sections/replacements";
-
-interface IAPIParams {
-    apiUrl?: string;
-}
 
 class API {
     private readonly _apiUrl: string;
@@ -43,5 +39,7 @@ class API {
         }
     }
 }
+
+export * from "./types";
 
 export { APIError, API };
