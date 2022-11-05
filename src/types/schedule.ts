@@ -24,6 +24,11 @@ interface ILesson {
     num: number;
 }
 
+interface IExtendedLesson extends ILesson {
+    start: string;
+    end: string;
+}
+
 interface IReplacement {
     detected: number;
     addToSite: number;
@@ -36,7 +41,7 @@ interface IReplacement {
 interface IScheduleGetResponse {
     place: string;
     week: IWeek;
-    lessons: ILesson[];
+    lessons: IExtendedLesson[];
     replacements?: IReplacement[];
 }
 
@@ -57,5 +62,7 @@ export {
     IScheduleGetWeekLegendParams,
     IScheduleGetResponse,
     IScheduleGetWeekResponse,
-    IWeek
+    IWeek,
+    ILesson,
+    IExtendedLesson,
 };
