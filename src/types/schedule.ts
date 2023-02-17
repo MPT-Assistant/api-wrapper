@@ -29,7 +29,8 @@ interface IExtendedLesson extends ILesson {
     end: string;
 }
 
-interface IReplacement {
+interface IScheduleReplacement {
+    num: number;
     detected: number;
     addToSite: number;
     oldLessonName: string;
@@ -42,7 +43,7 @@ interface IScheduleGetResponse {
     place: string;
     week: IWeek;
     lessons: IExtendedLesson[];
-    replacements?: IReplacement[];
+    replacements?: IScheduleReplacement[];
 }
 
 interface IWeekDaySchedule {
@@ -57,12 +58,13 @@ interface IScheduleGetWeekResponse {
 }
 
 export {
-    IScheduleGetParams,
-    IScheduleGetWeekParams,
-    IScheduleGetWeekLegendParams,
-    IScheduleGetResponse,
-    IScheduleGetWeekResponse,
-    IWeek,
-    ILesson,
     IExtendedLesson,
+    ILesson,
+    IScheduleGetParams,
+    IScheduleGetResponse,
+    IScheduleGetWeekLegendParams,
+    IScheduleGetWeekParams,
+    IScheduleGetWeekResponse,
+    IScheduleReplacement,
+    IWeek,
 };
