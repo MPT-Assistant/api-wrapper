@@ -14,5 +14,6 @@ interface IAPIError {
 export * from "./groups";
 export * from "./schedule";
 export * from "./replacements";
+export * from "./teachers";
 
 export { IAPIParams, IAPIError };
