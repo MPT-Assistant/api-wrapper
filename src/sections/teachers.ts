@@ -3,7 +3,8 @@ import {
     ITeacher,
     ITeacherSchedule,
     ITeachersGetByNameParams,
-    ITeachersGetListParams
+    ITeachersGetListParams,
+    ITeachersGetScheduleParams
 } from "../types";
 
 class APITeachers {
@@ -23,7 +24,7 @@ class APITeachers {
         return this._call("teachers.getList", params);
     }
 
-    public getSchedule(params: ITeacherSchedule): Promise<ITeacherSchedule> {
+    public getSchedule(params: ITeachersGetScheduleParams): Promise<ITeacherSchedule> {
         return this._call("teachers.getSchedule", params);
     }
 }

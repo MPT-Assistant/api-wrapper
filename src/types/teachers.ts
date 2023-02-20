@@ -38,6 +38,8 @@ interface ITeacherSchedule {
 export {
     ITeachersGetByNameParams,
     ITeachersGetListParams,
+    ITeachersGetScheduleParams,
     ITeacher,
-    ITeacherSchedule
+    ITeacherSchedule,
+    ITeacherScheduleLesson
 };
