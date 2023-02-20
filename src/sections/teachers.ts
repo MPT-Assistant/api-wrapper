@@ -1,6 +1,7 @@
 import { API } from "..";
 import {
     ITeacher,
+    ITeacherSchedule,
     ITeachersGetByNameParams,
     ITeachersGetListParams
 } from "../types";
@@ -20,6 +21,10 @@ class APITeachers {
 
     public getList(params?: ITeachersGetListParams): Promise<ITeacher[]> {
         return this._call("teachers.getList", params);
+    }
+
+    public getSchedule(params: ITeacherSchedule): Promise<ITeacherSchedule> {
+        return this._call("teachers.getSchedule", params);
     }
 }
 
